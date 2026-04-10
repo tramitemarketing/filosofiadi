@@ -2,13 +2,7 @@
    FILOSOFIADI — Main Script
    ========================================= */
 
-// Nav: show background on scroll
-const header = document.querySelector('.site-header');
-if (header) {
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-}
+// Nav: border è sempre visibile, nessun comportamento scroll necessario
 
 // Mobile nav toggle
 const navToggle = document.querySelector('.nav-toggle');
@@ -23,7 +17,12 @@ if (navToggle && navLinks) {
 // Active nav link
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(link => {
-  if (link.getAttribute('href') === currentPage) link.classList.add('active');
+  const href = link.getAttribute('href');
+  if (href === currentPage) {
+    link.classList.add('active');
+  } else if (href === 'episodi.html' && currentPage === 'episodio.html') {
+    link.classList.add('active');
+  }
 });
 
 // Scroll-reveal
@@ -98,7 +97,6 @@ class AudioPlayer {
   }
 
   toggle() {
-    // Stop all other players
     document.querySelectorAll('.audio-player').forEach(p => {
       if (p !== this.el && p._player && p._player.playing) p._player.pause();
     });
@@ -146,4 +144,59 @@ document.querySelectorAll('.card-play').forEach(btn => {
       btn.classList.toggle('playing', player.classList.contains('open'));
     }
   });
+});
+
+/* =========================================
+   Modal system (backstage + video)
+   ========================================= */
+
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  modal.querySelector('.fd-modal-close')?.focus();
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+
+  const iframe = modal.querySelector('iframe');
+  if (iframe) {
+    const src = iframe.src;
+    iframe.src = '';
+    iframe.src = src;
+  }
+}
+
+// Open triggers
+const btnBackstage = document.getElementById('btnBackstage');
+if (btnBackstage) btnBackstage.addEventListener('click', () => openModal('modalBackstage'));
+
+const btnFonti = document.getElementById('btnFonti');
+if (btnFonti) btnFonti.addEventListener('click', () => openModal('modalFonti'));
+
+const btnVideo = document.getElementById('btnVideo');
+if (btnVideo) btnVideo.addEventListener('click', () => openModal('modalVideo'));
+
+// Close buttons
+document.querySelectorAll('[data-close]').forEach(btn => {
+  btn.addEventListener('click', () => closeModal(btn.dataset.close));
+});
+
+// Click outside to close
+document.querySelectorAll('.fd-modal').forEach(modal => {
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal(modal.id);
+  });
+});
+
+// ESC key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.fd-modal.open').forEach(m => closeModal(m.id));
+  }
 });
