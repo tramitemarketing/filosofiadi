@@ -23,7 +23,6 @@
     </button>
     <ul class="nav-links">
       <li><a href="episodi.html">Episodi</a></li>
-      <li><a href="appunti.html">Appunti</a></li>
       <li><a href="chi-siamo.html">Chi siamo</a></li>
     </ul>
     <div class="nav-end">
@@ -66,7 +65,7 @@
         <div class="ep-featured-num">01</div>
         <div class="ep-featured-body">
           <div class="ep-featured-meta">
-            <span class="meta">7 aprile 2026</span>
+            <span class="meta">11 aprile 2026</span>
           </div>
           <h2 class="ep-featured-title">
             <a href="episodio.html">Hume: l'uomo che ha distrutto la scienza</a>
@@ -75,16 +74,10 @@
             Causalità, identità dell'io, mondo esterno. Hume prende tre pilastri su cui si regge tutto, li guarda da vicino e li smonta — uno per uno, con lo stesso coltello.
           </p>
           <div class="ep-featured-actions">
-            <div class="audio-player" data-src="" style="flex: 1; min-width: 240px; max-width: 380px;">
-              <button class="ap-play" aria-label="Riproduci / pausa">
-                <svg class="icon-play" width="13" height="13" viewBox="0 0 13 13" fill="currentColor"><path d="M3 1.5l8 5-8 5z"/></svg>
-                <svg class="icon-pause" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" style="display:none"><rect x="2.5" y="1.5" width="3" height="10" rx="0.5"/><rect x="7.5" y="1.5" width="3" height="10" rx="0.5"/></svg>
-              </button>
-              <div class="ap-body">
-                <div class="ap-bar"><div class="ap-fill"></div></div>
-                <div class="ap-times"><span class="time-cur">0:00</span><span class="time-tot">--:--</span></div>
-              </div>
-            </div>
+            <a href="episodio.html" class="btn btn-red">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Guarda ora
+            </a>
             <a href="episodio.html" class="link-arrow" style="white-space: nowrap;">
               Vai all'episodio
               <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5.5h7M5.5 2l3.5 3.5-3.5 3.5"/></svg>
@@ -95,26 +88,33 @@
     </div>
   </section>
 
-  <!-- APPUNTI CALLOUT -->
-  <div class="container">
-    <div class="appunti-callout reveal">
-      <p>Preferisci studiare leggendo? Scarica gli appunti in PDF.</p>
-      <a href="appunti.html" class="link-arrow">
-        Vai agli appunti
-        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5.5h7M5.5 2l3.5 3.5-3.5 3.5"/></svg>
-      </a>
-    </div>
-  </div>
-
-  <!-- CITAZIONE ARISTOTELE -->
+  <!-- CITAZIONE + CHI SIAMO -->
   <section class="quote-section">
     <div class="container">
-      <blockquote class="aristotle-quote reveal">
-        <p class="q-it">"La meraviglia è l'inizio di ogni filosofia."</p>
-        <span class="q-el">Διὰ γὰρ τὸ θαυμάζειν οἱ ἄνθρωποι καὶ νῦν καὶ τὸ πρῶτον ἤρξαντο φιλοσοφεῖν</span>
-        <span class="q-la">Propter admirationem enim et nunc et prius homines philosophari coeperunt</span>
-        <footer>— Aristotele, <em>Metafisica</em> 982b</footer>
-      </blockquote>
+      <div class="home-bottom-grid">
+
+        <blockquote class="aristotle-quote reveal">
+          <p class="q-it">"La meraviglia è l'inizio di ogni filosofia."</p>
+          <span class="q-el">Διὰ γὰρ τὸ θαυμάζειν οἱ ἄνθρωποι καὶ νῦν καὶ τὸ πρῶτον ἤρξαντο φιλοσοφεῖν</span>
+          <span class="q-la">Propter admirationem enim et nunc et prius homines philosophari coeperunt</span>
+          <footer>— Aristotele, <em>Metafisica</em> 982b</footer>
+        </blockquote>
+
+        <div class="home-chi-siamo reveal">
+          <span class="label" style="display:block; margin-bottom: 1rem;">Chi siamo</span>
+          <p>
+            Filosofia Di è un podcast che parte dai testi, non dai riassunti. Ogni episodio affronta un filosofo o un problema con rigore e chiarezza: niente semplificazioni forzate, niente divulgazione vuota.
+          </p>
+          <p>
+            Crediamo che la filosofia non abbia bisogno di essere resa più facile — ha bisogno di essere spiegata come si deve.
+          </p>
+          <a href="chi-siamo.html" class="link-arrow" style="margin-top: 0.75rem; display:inline-flex;">
+            Scopri di più
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 5.5h7M5.5 2l3.5 3.5-3.5 3.5"/></svg>
+          </a>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -126,7 +126,6 @@
       <span class="footer-logo">Filosofia<span class="dot">·</span>Di</span>
       <nav class="footer-links">
         <a href="episodi.html">Episodi</a>
-        <a href="appunti.html">Appunti</a>
         <a href="chi-siamo.html">Chi siamo</a>
         <!-- PIATTAFORME — decommentare quando disponibili
         <a href="#">Spotify</a>
