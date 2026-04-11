@@ -97,6 +97,7 @@ class AudioPlayer {
   }
 
   toggle() {
+    // Stop all other players
     document.querySelectorAll('.audio-player').forEach(p => {
       if (p !== this.el && p._player && p._player.playing) p._player.pause();
     });
@@ -164,6 +165,7 @@ function closeModal(id) {
   modal.classList.remove('open');
   document.body.style.overflow = '';
 
+  // Stop video iframe if present
   const iframe = modal.querySelector('iframe');
   if (iframe) {
     const src = iframe.src;
@@ -200,3 +202,8 @@ document.addEventListener('keydown', e => {
     document.querySelectorAll('.fd-modal.open').forEach(m => closeModal(m.id));
   }
 });
+
+// Auto-open video modal if URL contains #video
+if (window.location.hash === '#video') {
+  window.addEventListener('load', () => openModal('modalVideo'));
+}
