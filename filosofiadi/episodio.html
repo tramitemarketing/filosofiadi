@@ -74,6 +74,13 @@
         </div>
       </div>
 
+      <div class="animate-in" style="margin-top: 1.75rem;">
+        <button class="btn btn-red" id="btnVideo">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          Guarda ora
+        </button>
+      </div>
+
     </div>
   </section>
 
@@ -144,8 +151,8 @@
               Letture consigliate per approfondire
             </button>
             <button class="btn-backstage" id="btnBackstage" style="max-width: none;">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="5" r="2.5"/><path d="M1.5 10.5c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4"/></svg>
-              Backstage — come abbiamo registrato
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 3h10M1 6h6M1 9h4"/><rect x="7" y="5.5" width="4" height="3" rx="0.5"/></svg>
+              Attrezzatura utilizzata
             </button>
           </div>
 
@@ -392,39 +399,11 @@
     <div class="fd-modal-head">
       <div>
         <p class="fd-modal-subtitle">Episodio 1 · Hume</p>
-        <h2 class="fd-modal-title" id="bsTitle">Backstage</h2>
+        <h2 class="fd-modal-title" id="bsTitle">Attrezzatura</h2>
       </div>
       <button class="fd-modal-close" data-close="modalBackstage" aria-label="Chiudi">×</button>
     </div>
     <div class="fd-modal-body">
-
-      <!-- Foto placeholder -->
-      <div class="backstage-grid">
-        <div class="backstage-photo">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="6" width="18" height="13" rx="1.5"/><circle cx="12" cy="12.5" r="3"/><path d="M8 6V4.5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V6"/></svg>
-          <span class="ph-label">Foto in arrivo</span>
-        </div>
-        <div class="backstage-photo">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="6" width="18" height="13" rx="1.5"/><circle cx="12" cy="12.5" r="3"/><path d="M8 6V4.5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V6"/></svg>
-          <span class="ph-label">Foto in arrivo</span>
-        </div>
-        <div class="backstage-photo">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="6" width="18" height="13" rx="1.5"/><circle cx="12" cy="12.5" r="3"/><path d="M8 6V4.5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V6"/></svg>
-          <span class="ph-label">Foto in arrivo</span>
-        </div>
-        <div class="backstage-photo">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="6" width="18" height="13" rx="1.5"/><circle cx="12" cy="12.5" r="3"/><path d="M8 6V4.5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V6"/></svg>
-          <span class="ph-label">Foto in arrivo</span>
-        </div>
-        <div class="backstage-photo">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="6" width="18" height="13" rx="1.5"/><circle cx="12" cy="12.5" r="3"/><path d="M8 6V4.5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V6"/></svg>
-          <span class="ph-label">Foto in arrivo</span>
-        </div>
-        <div class="backstage-photo">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="6" width="18" height="13" rx="1.5"/><circle cx="12" cy="12.5" r="3"/><path d="M8 6V4.5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V6"/></svg>
-          <span class="ph-label">Foto in arrivo</span>
-        </div>
-      </div>
 
       <!-- Attrezzatura -->
       <div class="equip-section">
@@ -472,12 +451,7 @@
       <button class="fd-modal-close" data-close="modalVideo" aria-label="Chiudi">×</button>
     </div>
     <div class="fd-video-embed">
-      <!-- Google Drive embed — inserire src quando disponibile -->
-      <!-- <iframe src="https://drive.google.com/file/d/FILEID/preview" allowfullscreen></iframe> -->
-      <div class="fd-video-placeholder">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.3"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        <span style="font-family:var(--font-ui); font-size:0.72rem; letter-spacing:0.1em; color:var(--text-dim); text-transform:uppercase;">Video in arrivo</span>
-      </div>
+      <iframe src="https://drive.google.com/file/d/1XDLSDm3e9_HS7JfXlG1NqXZLlXf502sz/preview" allowfullscreen allow="autoplay"></iframe>
     </div>
   </div>
 </div>

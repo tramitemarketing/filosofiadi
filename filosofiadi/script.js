@@ -202,3 +202,8 @@ document.addEventListener('keydown', e => {
     document.querySelectorAll('.fd-modal.open').forEach(m => closeModal(m.id));
   }
 });
+
+// Auto-open video modal if URL contains #video
+if (window.location.hash === '#video') {
+  window.addEventListener('load', () => openModal('modalVideo'));
+}
